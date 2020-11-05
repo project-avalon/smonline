@@ -1,0 +1,50 @@
+/* CSS Document */
+
+/* CSS Document */
+
+body {
+	font: 13px/30px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	color:#404040;
+	background-color:0;
+	background-image: url(../tress.jpg);
+	height: auto;
+	width: auto;
+}
+
+.container {
+  margin: 150px;
+  width: 1000px;
+	
+}
+
+.background {
+
+  position: relative;
+  margin: 0 auto; /* center background */
+  padding: 20px 20px 20px;
+  width: 310px;
+  background:white;
+ 
+}
+
+
+input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  
+  
+}
+input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+}
+

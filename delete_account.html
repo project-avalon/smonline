@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<title>Sample data</title>
+ <style>
+ background-size: cover;
+ background-repeat: no-repeat;
+ </style>
+ 
+
+	<body style="background-image: url('Levelup.jpg')" "background-size: cover">
+	
+	<center>
+	<h1><img src=""></h1>
+	
+		<br><br><br><br><br><br>
+		User Identification: <br><input id="rollbox" type="text"></input><br><br>
+		<button id="delete">DELETE ACCOUNT</button><br><br>
+		<button onclick="location.href='Main.html'" type="button">
+         RETURN TO MAIN PAGE</button>
+		
+		<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+		<script src="https://www.gstat ic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+		
+<script id="MainScript">
+					var firebaseConfig = {
+				apiKey: "AIzaSyDJXUFrTuIcK-cDHJDdJQCQr86BA1dP2Qg",
+				authDomain: "project-avalon-37847.firebaseapp.com",
+				databaseURL: "https://project-avalon-37847.firebaseio.com",
+				projectId: "project-avalon-37847",
+				storageBucket: "project-avalon-37847.appspot.com",
+				messagingSenderId: "295259710965",
+				appId: "1:295259710965:web:0f9e1d40fa0a7cba66acbc"
+			  };
+		// Initialize Firebase //
+		firebase.initializeApp(firebaseConfig);
+		
+		//-------------Ready Data--------------//
+		var nameV, rollV, secV, genV;
+
+		function Ready(){
+			nameV = document.getElementById('namebox').value;
+			rollV = document.getElementById('rollbox').value;
+			secV = document.getElementById('secbox').value;
+			genV = document.getElementById('genbox').value;
+			
+		}
+		
+		<!--//----------delete process--------//
+		document.getElementById('delete').onclick = function(){
+			Ready();
+			firebase.database().ref('account/'+rollV).remove();
+			}
+</script>	
+</body>
+</html>
